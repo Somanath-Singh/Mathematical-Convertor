@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="./logic.js"></script>
+</head>
+<body>
+	<div class="first-div">
+		<h2>You can use these to get some operation</h2>
+	</div>
+	<!-- calculator section  -->
+	<div class="display">
+		<div class="Calculator">
+			<h2>Calculator</h2>
+			<div class="result">
+				<input type="text" id="result" readonly>
+			</div>
+			<div class="input-val">
+				<input type="button" value="AC" onclick="result.value=''">
+				<input type="button" value="DEL" onclick="result.value=result.value.toString().slice(0,-1) ">
+				<input type="button" value="+" onclick="result.value+='+'" style="width: 115px;" class="symbol">
+			</div>
+			<div class="input-val">
+				<input type="button" value="7" onclick="result.value+='7'">
+				<input type="button" value="8" onclick="result.value+='8'">
+				<input type="button" value="9" onclick="result.value+='9'">
+				<input type="button" value="-" onclick="result.value+='-'" class="symbol">
+			</div>
+			<div class="input-val">
+				<input type="button" value="4" onclick="result.value+='4'">
+				<input type="button" value="5" onclick="result.value+='5'">
+				<input type="button" value="6" onclick="result.value+='6'">
+				<input type="button" value="*" onclick="result.value+='*'" class="symbol">
+			</div>
+			<div class="input-val">
+				<input type="button" value="1" onclick="result.value+='1'">
+				<input type="button" value="2" onclick="result.value+='2'">
+				<input type="button" value="3" onclick="result.value+='3'">
+				<input type="button" value="/" onclick="result.value+='/'" class="symbol">
+			</div>
+			<div class="input-val">
+				<input type="button" value="00" onclick="result.value+='00'">
+				<input type="button" value="0" onclick="result.value+='0'">
+				<input type="button" value="." onclick="result.value+='.'">
+				<input type="button" value="=" onclick="result.value=result.value=eval(result.value)" class="symbol">
+			</div>
+		</div>
+		
+		<!-- simple intrest section -->
+		<div class="container1">
+			<h2>Interest Calc</h2>
+			<p>
+				<label>Principal Amount</label> <br>
+				<input type="text" id="pamt"/> <span>&#8377;</span>
+			</p>
+			<p>
+				<label>Rate of Interest</label> <bR>
+				<input type="text" id="roi" maxlength="3"> <span>%</span>
+			</p>
+			<p>
+				<label>Time</label> <bR>
+				<input type="text" id="time" maxlength="2"> <span>Year(s)</span>
+			</p>
+			<p align="center">
+				<button onclick="getAmount()">get interest</button>
+			</p>
+			<p>
+				<output id="intAmt"></output> <bR>
+				<output id="totAmt3"></output> <bR>
+			</p>
+		</div>
+
+		<!-- compound intrest section -->
+		<div class="container">
+			<h2>Compound Interst</h2>
+			<p>
+				<label for="pri">Principal</label><br>
+				<input type="text" id="pri"> <span>&#8377;</span>
+			</p>
+			<p>
+				<label>Rate of Interest</label> <bR>
+				<input type="text" id="roi1" maxlength="4"> <span>%</span>
+			</p>
+			<p>
+				<label>Time</label> <bR>
+				<input type="text" id="time1" maxlength="2"> <span>Year(s)</span>
+			</p>
+			<p>
+				<label for="ntic">No of timesinterst compounded</label> <bR>
+				<input type="text" id="ntic" maxlength="2"> <span>(n)</span>
+			</p>
+			<p align="center">
+				<button onclick="getCompoundAmount()">compound interest</button>
+			</p>
+			<p>
+				<output id="totAmt1"></output> <bR>
+				<output id="totAmt2"></output>
+			</p>
+		</div>
+		<!-- <div class="container1">
+			<h2>Temperature</h2>
+			<p>
+			   <label for="cel">Degree Celsius</label>
+			   <br>
+			   <input type="text" id="cel">
+			</p>
+			<p>
+			   <label for="far">Fahrenheit</label>
+			   <br>
+			   <input type="text" id="far">
+			</p>
+			<p align="center">
+				<button onclick="getTemp()">get temperature</button>
+			</p>
+			<p>
+				<output id="res1"></output>
+				<br>
+				<output id="res2"></output>
+			</p>
+		</div> -->
+
+		<!-- temperature convertor -->
+		<div class="container2">
+			<h2>Temperature</h2>
+            <form class="sub-form1" oninput="far1.value=(cel1.value*9/5) + 32">
+				<div>
+					<label for="cel1">Celsius</label>
+					<br>
+					<input type="text" id="cel1">
+				</div>
+				<div>
+					<strong>=</strong>
+				</div>
+				 <div>
+					<label for="far1">Fahrenheit</label>
+					<br>
+					<input type="text" id="far1" readonly>
+				 </div>
+			</form>
+			<br>
+			<form class="sub-form1" oninput="kel.value=parseFloat(cel1.value + 273.15)">
+				<div>
+					<label for="cel1">Celsius</label>
+					<br>
+					<input type="text" id="cel1">
+				</div>
+				<div>
+					<strong>=</strong>
+				</div>
+				 <div>
+					<label for="kel">Kelvin</label>
+					<br>
+					<input type="text" id="kel" readonly>
+				 </div>
+			</form>
+			<br>
+			<form class="sub-form1" oninput="cel.value=(far.value - 32)*5/9">
+				<div>
+					<label for="far">Fahrenheit</label>
+					<br>
+					<input type="text" id="far">
+				</div>
+				<div>
+					<strong>=</strong>
+				</div>
+				 <div>
+					<label for="cel">Celsius</label>
+					<br>
+					<input type="text" id="cel" readonly>
+				 </div>
+			</form>
+			<br>
+			<form class="sub-form1" oninput="kel1.value=(far2.value - 32) * 5/9 + 273.15">
+				<div>
+					<label for="far2">Fahrenheit</label>
+					<br>
+					<input type="text" id="far2">
+				</div>
+				<div>
+					<strong>=</strong>
+				</div>
+				 <div>
+					<label for="kel1">Kelvin</label>
+					<br>
+					<input type="text" id="kel1" readonly>
+				 </div>
+			</form>
+			<br>
+			<form class="sub-form1" oninput="far3.value=(kel2.value - 273.15)*9/5 + 32">
+				<div>
+					<label for="kel2">Kelvin</label>
+					<br>
+					<input type="text" id="kel2">
+				</div>
+				<div>
+					<strong>=</strong>
+				</div>
+				 <div>
+					<label for="far3">Fahrenheit</label>
+					<br>
+					<input type="text" id="far3" readonly>
+				 </div>
+			</form>
+		</div>
+
+		
+	</div>
+	
+</body>
+</html>
