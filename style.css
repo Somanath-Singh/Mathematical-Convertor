@@ -171,3 +171,84 @@ body{
     background:transparent;
     border-bottom:2px solid rgb(0, 0, 0);
 }
+/*matrix multiplication*/
+.array-input input{
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: 1px solid black;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: large;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.array-input{
+    background-image: linear-gradient(to right, rgb(0, 174, 255),rgb(255, 0, 81));
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 80%;
+    margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   box-shadow: 1px 1px 15px rgb(255, 15, 111);
+}
+.left{
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    margin: 12px;
+}
+.right{
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    margin: 12px;
+}
+.font-text{
+    text-decoration: underline;
+    font-size: 23px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+}
+.text-btn{
+    margin: auto;
+}
+.text-btn button{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px 6px;
+    margin: 2px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 15px rgb(0, 0, 0);
+    border-radius: 9px;
+    color: white;
+}
+
+@media(max-width:770px){
+    .array-input{
+        width: 80%;
+    }
+    .left{
+        padding-left: 34px;/*on mobile */
+    }
+    .right{
+        padding-left: 34px;/*on mobile */
+    }
+}
