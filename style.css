@@ -2,7 +2,7 @@ body{
     background-color: #000000;
 }
 .first-div{
-    background-color: #ff0080;
+    background-color: #7700ff;
     color: white;
     height: 65px;
     text-align: center;
@@ -19,7 +19,7 @@ body{
 
 /* calculator section */
 .Calculator{
-    background-image: linear-gradient(to right, rgb(0, 174, 255),rgb(255, 0, 81));
+    background-image: linear-gradient(45deg, #FF5ACD 0%, #FBDA61 100%);
     width: 289px;
     /* margin: auto; */
     border-radius: 12px;
@@ -69,7 +69,7 @@ body{
  /* simple intrest section */
 .container1{
     width:240px;
-    background-image: linear-gradient(to right, rgb(0, 174, 255),rgb(255, 0, 81));
+    background-image: linear-gradient(45deg, #FF5ACD 0%, #FBDA61 100%);
     border-radius:10px;
     box-shadow:1px 1px 15px #ff0c8e;
     border: 3px colid ;
@@ -107,7 +107,7 @@ body{
 /* compound interst section */
 .container{
     width:240px;
-    background-image: linear-gradient(to right, rgb(0, 174, 255),rgb(255, 0, 81));
+    background-image: linear-gradient(45deg, #FF5ACD 0%, #FBDA61 100%);
     border-radius:10px;
     box-shadow:1px 1px 15px #ff059b;
     color:#000000;
@@ -145,7 +145,7 @@ body{
  /* temperature convertor */
 .container2{
     width:240px;
-    background-image: linear-gradient(to right, rgb(0, 174, 255),rgb(255, 0, 81));
+    background-image: linear-gradient(45deg, #FF5ACD 0%, #FBDA61 100%);
     border-radius:10px;
     box-shadow:1px 1px 15px #ff00c3;
     color:#000000;
@@ -188,7 +188,7 @@ body{
     justify-content: center;
 }
 .array-input{
-    background-image: linear-gradient(to right, rgb(0, 174, 255),rgb(255, 0, 81));
+    background-image: linear-gradient(45deg, #FF5ACD 0%, #FBDA61 100%);
     border: 1px solid black;
     border-radius: 7px;
     width: 80%;
